@@ -18,8 +18,8 @@ WORKDIR /app/idm-vton
 RUN sed -e '/^torch/d' -e '/^pillow/d' requirements.txt > /tmp/reqs.txt && \
     pip install --no-cache-dir -r /tmp/reqs.txt
 
-# RunPod SDK + detectron2 from source (needs CUDA devel headers)
-RUN pip install --no-cache-dir runpod==1.7.0 && \
+# RunPod SDK + brotli fix + detectron2 from source
+RUN pip install --no-cache-dir runpod brotlicffi && \
     pip install --no-cache-dir 'git+https://github.com/facebookresearch/detectron2.git'
 
 # Download IDM-VTON model weights from HuggingFace model repo
