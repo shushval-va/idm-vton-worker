@@ -17,6 +17,7 @@ RUN pip install --no-cache-dir \
     scipy==1.10.1 \
     scikit-image==0.21.0 \
     opencv-python==4.7.0.72 \
+    config==0.5.1 \
     einops==0.7.0 \
     onnxruntime==1.16.2 \
     basicsr \
